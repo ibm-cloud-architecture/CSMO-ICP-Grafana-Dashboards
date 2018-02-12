@@ -2041,6 +2041,101 @@
       "showTitle": false,
       "title": "Load Avg.",
       "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_PROMETHEUS}",
+          "description": "A visualization of available entropy within a cluster's Node.",
+          "fill": 1,
+          "id": 48,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": false,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 12,
+          "stack": false,
+          "steppedLine": true,
+          "targets": [
+            {
+              "expr": "node_entropy_available_bits",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "metric": "node_entropy_available_bits",
+              "refId": "A",
+              "step": 4
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Available Entropy",
+          "tooltip": {
+            "shared": false,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": false,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Available Entropy",
+      "titleSize": "h6"
     }
   ],
   "schemaVersion": 14,
@@ -2153,6 +2248,6 @@
     ]
   },
   "timezone": "browser",
-  "title": "ICP 2.1 Performance IBM Provided 2.5",
+  "title": "ICP 2.1 Performance IBM Provided 2.5.1",
   "version": 2
 }
